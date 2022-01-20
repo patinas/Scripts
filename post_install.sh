@@ -13,7 +13,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo apt install openssh-server -y
 
 
-chmod u+x ~/post_install_linux/post_install.sh
+sudo chmod u+x ~/post_install_linux/post_install.sh
 
 sudo apt update && sudo apt upgrade -y
 
