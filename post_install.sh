@@ -80,7 +80,7 @@ sudo apt install inotify-tools -y
 sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 sudo apt update
 sudo apt install snapd -y
-snap install symbolize
+sudo snap install symbolize
 
 sudo apt update && sudo apt upgrade -y
 
