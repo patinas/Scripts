@@ -11,14 +11,23 @@ sudo apt update && sudo apt upgrade -y
 # sudo apt install rclone -y
 
 ## Sync with google drive
-sudo rclone sync -P drive:/Sync/ ~/Sync/
+sudo rclone sync -P drive:/Sync/ ~/Sync/ 
 sudo rclone sync -P drive:/Scripts/ ~/Scripts/
 
-## Download new config
-# sudo rm -rf ~/.config/
-# sudo rm -rf ~/.cinnamon/
-sudo rsync -aPv ~/Sync/.config/ ~/.config/
-sudo rsync -aPv ~/Sync/.cinnamon/ ~/.cinnamon/
+## Restore from google drive
+sudo rsync -aP ~/Sync/ ~/cinnamon.dconf  
+sudo rsync -aP ~/Sync/ ~/nemo.dconf  
+sudo rsync -aP ~/Sync/ ~/gtk.dconf  
+sudo rsync -aP ~/Sync/ ~/gnome.dconf
+
+dconf dump /org/cinnamon/ < cinnamon.dconf
+dconf dump /org/nemo/ < nemo.dconf
+dconf dump /org/gtk/ < gtk.dconf
+dconf dump /org/gnome/ < gnome.dconf
+
+## Backup to google drive
+# sudo rsync -aP --exclude 'google-chrome' ~/.config/ ~/Sync/.config/
+# sudo rsync -aP ~/.cinnamon/ ~/Sync/.cinnamon/
 
 sudo apt update && sudo apt upgrade -y
 
