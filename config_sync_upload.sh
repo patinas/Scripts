@@ -10,9 +10,20 @@ sudo apt update && sudo apt upgrade -y
 ## Remember to connect Google Drive as remote
 # sudo apt install rclone -y
 
+dconf dump /org/cinnamon/ > cinnamon.dconf
+dconf dump /org/nemo/ > nemo.dconf
+dconf dump /org/gtk/ > gtk.dconf
+dconf dump /org/gnome/ > gnome.dconf
+
 ## Backup to google drive
-sudo rsync -aP --exclude 'google-chrome' ~/.config/ ~/Sync/.config/
-sudo rsync -aP ~/.cinnamon/ ~/Sync/.cinnamon/
+sudo rsync -aP ~/cinnamon.dconf  ~/Sync/
+sudo rsync -aP ~/nemo.dconf  ~/Sync/
+sudo rsync -aP ~/gtk.dconf  ~/Sync/
+sudo rsync -aP ~/gnome.dconf  ~/Sync/
+
+## Backup to google drive
+# sudo rsync -aP --exclude 'google-chrome' ~/.config/ ~/Sync/.config/
+# sudo rsync -aP ~/.cinnamon/ ~/Sync/.cinnamon/
 
 ## Sync with google drive
 sudo rclone sync -P ~/Sync/ drive:/Sync/
