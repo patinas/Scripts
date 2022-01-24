@@ -13,14 +13,7 @@ sudo apt install variety -y
 
 sudo apt update && sudo apt upgrade -y
 
-
-
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-sudo wget https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb
-sudo apt install ./download?dl=packages%2Fubuntu%2Fdropbox_2020.03.04_amd64.deb -y
-
-# Open Dropbox and connect account
-
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
 sudo apt install peek -y
@@ -80,7 +73,6 @@ sudo apt install inotify-tools -y
 sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 sudo apt update
 sudo apt install snapd -y
-sudo snap install symbolize
 
 sudo apt update && sudo apt upgrade -y
 
