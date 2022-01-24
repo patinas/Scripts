@@ -12,4 +12,4 @@ sudo apt update && sudo apt upgrade -y
 sudo rclone sync -P drive:/Sync/ ~/Sync/ 
 sudo rclone sync -P drive:/Scripts/ ~/Scripts/ 
 
-dconf load / < cinnamon_desktop
+dconf load / < ~/Sync/cinnamon_desktop
