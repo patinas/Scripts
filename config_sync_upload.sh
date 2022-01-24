@@ -15,6 +15,11 @@ dconf dump /org/nemo/ > nemo.dconf
 dconf dump /org/gtk/ > gtk.dconf
 dconf dump /org/gnome/ > gnome.dconf
 
+sudo mv cinnamon.dconf ~
+sudo mv nemo.dconf ~
+sudo mv gtk.dconf ~
+sudo mv gnome.dconf ~
+
 ## Backup to google drive
 sudo rsync -aP ~/cinnamon.dconf  ~/Sync/
 sudo rsync -aP ~/nemo.dconf  ~/Sync/
