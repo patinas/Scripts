@@ -10,6 +10,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo apt install openssh-server -y
 sudo apt install peek -y
 sudo apt install variety -y
+sudo apt install rclone -y
 
 sudo apt update && sudo apt upgrade -y
 
