@@ -11,6 +11,7 @@ sudo apt update && sudo apt upgrade -y
 ## Backup settings
 dconf dump / > cinnamon_desktop
 mv cinnamon_desktop ~/Sync/
+rm cinnamon_desktop
 
 ## Sync with google drive
 sudo rclone sync -P ~/Sync/ drive:/Sync/
