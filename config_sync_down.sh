@@ -2,6 +2,7 @@
 
 mkdir ~/Sync/
 mkdir ~/Scripts/
+sudo rm -r ~/Sync/cinnamon_desktop
 
 while true; do ping -c1 www.google.com > /dev/null && break; done
 sudo apt update && sudo apt upgrade -y
