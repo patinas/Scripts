@@ -1,0 +1,18 @@
+#!/bin/sh
+
+while true; do ping -c1 www.google.com > /dev/null && break; done
+
+sudo apt update && sudo apt upgrade -y
+
+sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
+
+sudo apt install openssh-server -y
+sudo apt install peek -y
+sudo apt install variety -y
+flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
+sudo apt install snapd -y
+
+echo Done
+
+exit
