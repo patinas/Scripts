@@ -10,6 +10,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo apt install openssh-server -y
 sudo apt install peek -y
 sudo apt install variety -y
+sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
 sudo apt install snapd -y
 
