@@ -4,6 +4,7 @@ while true; do ping -c1 www.google.com > /dev/null && break; done
 
 sudo apt update && sudo apt upgrade -y
 
+sudo apt install curl -y
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 
@@ -15,8 +16,9 @@ sudo zerotier-cli join 9f77fc393e977c16
 
 sudo chmod +x post_install_minimal.sh
 
-sudo apt update
-sudo apt install snapd -y
+curl https://getmic.ro | bash
+sudo chown root:root micro
+sudo mv micro /usr/local/bin
 
 sudo apt update && sudo apt upgrade -y
 
