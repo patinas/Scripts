@@ -16,6 +16,13 @@ sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
 sudo apt install snapd -y
 
+sudo curl -s https://install.zerotier.com | sudo bash
+sudo zerotier-cli join 9f77fc393e977c16
+
+curl https://getmic.ro | bash
+sudo chown root:root micro
+sudo mv micro /usr/local/bin
+
 echo Done
 
 exit
