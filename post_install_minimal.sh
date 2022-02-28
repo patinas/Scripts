@@ -19,6 +19,7 @@ sudo chmod +x post_install_minimal.sh
 curl https://getmic.ro | bash
 sudo chown root:root micro
 sudo mv micro /usr/local/bin
+sudo apt install xclip -y
 
 sudo apt update && sudo apt upgrade -y
 
