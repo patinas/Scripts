@@ -22,6 +22,7 @@ sudo zerotier-cli join 9f77fc393e977c16
 curl https://getmic.ro | bash
 sudo chown root:root micro
 sudo mv micro /usr/local/bin
+sudo apt install xclip -y
 
 echo Done
 
