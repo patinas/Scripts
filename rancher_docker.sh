@@ -12,7 +12,6 @@ sudo systemctl start docker
 
 sudo docker run -d --restart=unless-stopped \
   -p 8080:80 -p 443:443 \
-  --privileged \
   rancher/rancher:latest
 
 sudo curl -s https://install.zerotier.com | sudo bash
