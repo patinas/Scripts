@@ -18,7 +18,7 @@ sudo docker run -d --restart=unless-stopped \
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
 
-sudo chmod +x portainer.sh
+sudo chmod +x *.sh
 
 echo Done
 
