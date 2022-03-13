@@ -11,7 +11,7 @@ sudo systemctl enable docker
 sudo systemctl start docker
 
 sudo docker run -d --restart=unless-stopped \
-  -p 80:80 -p 443:443 \
+  -p 8080:80 -p 443:443 \
   --privileged \
   rancher/rancher:latest
 
