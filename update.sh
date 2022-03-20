@@ -7,7 +7,7 @@ apt clean &&
 apt autoclean &&
 apt autoremove -y
 
-sudo chmod +x ~/post_install_linux/*
+sudo chmod +x *.sh
 
 cat <<EOF | crontab -
 * 1 * * * ~/post_install_linux/update.sh
