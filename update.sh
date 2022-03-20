@@ -1,11 +1,11 @@
 #!/bin/bash
-dpkg --configure -a &&
-apt update &&
-apt upgrade -y &&
-apt install -f &&
-apt clean &&
-apt autoclean &&
-apt autoremove -y
+sudo dpkg --configure -a &&
+sudo apt update &&
+sudo apt upgrade -y &&
+sudo apt install -f &&
+sudo apt clean &&
+sudo apt autoclean &&
+sudo apt autoremove -y
 
 sudo chmod +x *.sh
 
