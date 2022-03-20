@@ -12,5 +12,3 @@ sudo chmod +x *.sh
 cat <<EOF | crontab -
 * 1 * * * /home/user/post_install_linux/update.sh
 EOF
-
-sudo visudo | sudo echo "user ALL=(ALL:ALL) NOPASSWD: ALL"
