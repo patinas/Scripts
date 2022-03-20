@@ -13,4 +13,4 @@ cat <<EOF | crontab -
 * 1 * * * /home/user/post_install_linux/update.sh
 EOF
 
-echo "user ALL=(ALL:ALL) NOPASSWD: ALL" | sudo tee /etc/sudoers.d/dont-prompt-user-for-sudo-password
+sudo visudo | sudo echo "user ALL=(ALL:ALL) NOPASSWD: ALL"
