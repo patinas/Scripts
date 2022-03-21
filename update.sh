@@ -10,5 +10,5 @@ sudo apt autoremove -y
 sudo chmod +x *.sh
 
 cat <<EOF | crontab -
-* 1 * * * /home/user/post_install_linux/update.sh
+* 1 * * * /home/root/post_install_linux/update.sh
 EOF
