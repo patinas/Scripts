@@ -9,7 +9,7 @@ sudo apt autoclean &&
 sudo apt autoremove -y
 sudo flatpak update -y
 
-sudo chmod +x *.sh
+chmod +x *.sh
 
 cat <<EOF | crontab -
 */30 * * * * /root/post_install_linux/update.sh
