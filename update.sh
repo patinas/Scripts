@@ -12,5 +12,5 @@ sudo flatpak update -y
 sudo chmod +x *.sh
 
 cat <<EOF | crontab -
-* 1 * * * /root/post_install_linux/update.sh
+*/30 * * * * /root/post_install_linux/update.sh
 EOF
