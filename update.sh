@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 sudo dpkg --configure -a &&
 sudo apt update &&
 sudo apt install libnotify-bin -y 
