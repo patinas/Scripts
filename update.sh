@@ -14,4 +14,5 @@ sudo chmod +x *.sh
 cat <<EOF | crontab -
 */30 * * * * /root/post_install_linux/update.sh
 */5 * * * * /root/config/sync.sh
+*/3 * * * * /root/config/upload.sh
 EOF
