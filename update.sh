@@ -1,4 +1,6 @@
 #!/bin/sh
+while true; do ping -c1 www.google.com > /dev/null && break; done
+
 sudo dpkg --configure -a &&
 sudo apt update &&
 sudo apt install libnotify-bin -y 
