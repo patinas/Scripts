@@ -9,10 +9,9 @@ sudo apt autoclean &&
 sudo apt autoremove -y
 sudo flatpak update -y
 
-chmod +x *.sh
+sudo chmod +x *.sh
 
 cat <<EOF | crontab -
 */30 * * * * /root/post_install_linux/update.sh
+*/5 * * * * /root/dotfiles/sync.sh
 EOF
-
-notify-send "Update done!"
