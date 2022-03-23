@@ -12,7 +12,7 @@ sudo flatpak update -y
 sudo chmod +x *.sh
 
 cat <<EOF | crontab -
-0 * * * * /root/post_install_linux/update.sh
-*/5 * * * * /root/config/sync.sh
-* * * * * /root/config/upload.sh
+*/30 * * * * /root/post_install_linux/update.sh
+*/5 * * * * /root/dotfiles/sync.sh
+*/3 * * * * /root/dotfiles/upload.sh
 EOF
