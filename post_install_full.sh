@@ -16,6 +16,10 @@ sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
 sudo apt install snapd -y
 
+sudo add-apt-repository ppa:blaze/main
+sudo apt update
+sudo apt install zeit -y
+
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
 
