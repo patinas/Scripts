@@ -7,8 +7,7 @@ then
 
     git add --all
     git commit -m "$gstatus"
-
-	git pull
+    git pull
     git push
 
 fi
