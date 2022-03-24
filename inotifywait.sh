@@ -1,6 +1,5 @@
 #!/bin/sh
 sudo apt install inotify-tools -y
-sudo apt install inotifywait -y
 
 WATCHDIR=/root/post_install_linux/
 TRIGGERCOMMAND=sh /root/post_install_linux/git_upload.sh
@@ -21,5 +20,5 @@ while inotifywait -qq -r -e modify,close_write,create,delete,move,delete_self $W
     $TRIGGERCOMMAND
 done
 
-cd /root/dotfiles/
+cd /root/post_install_linux/
 sudo +x *.sh
