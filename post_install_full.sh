@@ -17,7 +17,11 @@ sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
+sudo apt install snapd -y
 snap install spt
+sudo apt install rustc cargo libasound2-dev libssl-dev pkg-config -y
+
+
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
