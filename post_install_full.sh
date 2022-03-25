@@ -16,7 +16,9 @@ sudo apt install variety -y
 sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
 sudo apt install snapd -y
-sudo snap install ncspot -y
+sudo snap install ncspot
+sudo apt install libncursesw5-dev libdbus-1-dev libpulse-dev libssl-dev libxcb1-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev -y
+
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
