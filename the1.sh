@@ -18,8 +18,7 @@ flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1ge
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
-snap install spt
-sudo apt install rustc cargo libasound2-dev libssl-dev pkg-config -y
+snap install spotify
 
 
 
