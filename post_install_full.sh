@@ -8,6 +8,7 @@ sudo apt install curl -y
 
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
+sudo rm google-chrome-stable_current_amd64.deb
 
 sudo apt install openssh-server -y
 sudo apt install peek -y
@@ -15,10 +16,7 @@ sudo apt install variety -y
 sudo apt install flatpak -y
 flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref
 sudo apt install snapd -y
-
-sudo add-apt-repository ppa:blaze/main
-sudo apt update
-sudo apt install zeit -y
+sudo snap install ncspot -y
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
