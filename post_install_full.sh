@@ -20,7 +20,8 @@ sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
 snap install spt
 sudo apt install rustc cargo libasound2-dev libssl-dev pkg-config -y
-
+sudo apt install stow -y
+sudo apt install git -y
 
 
 sudo curl -s https://install.zerotier.com | sudo bash
