@@ -19,6 +19,7 @@ sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
 snap install spotify
+sudo apt install x2goclient -y
 
 
 
