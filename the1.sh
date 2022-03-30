@@ -20,12 +20,14 @@ sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
 snap install spotify
 sudo apt install x2goclient -y
+
+## Window Manager
 sudo add-apt-repository ppa:regolith-linux/stable
 sudo apt install regolith-desktop-standard -y
 sudo apt install regolith-look-ayu -y
-# regolith-look set regolith-look-ayu
-# regolith-look refresh
-
+regolith-look set regolith-look-ayu
+regolith-look refresh
+sudo cp config /etc/regolith/i3/
 
 
 sudo curl -s https://install.zerotier.com | sudo bash
