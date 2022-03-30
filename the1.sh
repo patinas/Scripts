@@ -22,6 +22,10 @@ snap install spotify
 sudo apt install x2goclient -y
 sudo add-apt-repository ppa:regolith-linux/stable
 sudo apt install regolith-desktop-standard -y
+sudo apt install regolith-look-ayu -y
+# regolith-look set ubuntu
+# regolith-look refresh
+
 
 
 sudo curl -s https://install.zerotier.com | sudo bash
