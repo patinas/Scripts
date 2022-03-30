@@ -29,6 +29,13 @@ regolith-look set ayu
 regolith-look refresh
 sudo cp config /etc/regolith/i3/
 
+sudo cat > ~/.Xresources-regolith <<EOF
+i3-wm.gaps.inner.size: 20
+gnome.terminal.font:	JetBrains Mono 15
+EOF
+regolith-look refresh
+
+
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
