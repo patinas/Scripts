@@ -25,7 +25,7 @@ sudo apt install x2goclient -y
 sudo add-apt-repository ppa:regolith-linux/stable
 sudo apt install regolith-desktop-standard -y
 sudo apt install regolith-look-ayu -y
-regolith-look set regolith-look-ayu
+regolith-look set ayu
 regolith-look refresh
 sudo cp config /etc/regolith/i3/
 
