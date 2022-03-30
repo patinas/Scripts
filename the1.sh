@@ -20,7 +20,8 @@ sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
 snap install spotify
 sudo apt install x2goclient -y
-
+sudo add-apt-repository ppa:regolith-linux/stable
+sudo apt install regolith-desktop-standard -y
 
 
 sudo curl -s https://install.zerotier.com | sudo bash
