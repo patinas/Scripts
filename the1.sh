@@ -35,7 +35,8 @@ gnome.terminal.font:	JetBrains Mono 15
 EOF
 regolith-look refresh
 
-
+## Autostart
+sudo cp -r autostart ~/.config/
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
