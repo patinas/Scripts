@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=sudo sh /root/post_install_linux/update.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[en_DK]=Update
+Name=Update
+Comment[en_DK]=
+Comment=
