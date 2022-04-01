@@ -19,7 +19,10 @@ sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
 snap install spotify
-sudo apt install x2goclient -y
+
+## Remote Desktop
+sudo apt install xrdp -y
+gsettings set org.gnome.Vino require-encryption false
 
 ## Window Manager
 sudo add-apt-repository ppa:regolith-linux/stable
