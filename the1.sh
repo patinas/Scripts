@@ -21,8 +21,12 @@ sudo apt install snapd -y
 snap install spotify
 
 ## Remote Desktop
+sudo apt remove xrdp vnc4server tightvncserver -y
+sudo apt install tightvncserver -y
 sudo apt install xrdp -y
-gsettings set org.gnome.Vino require-encryption false
+sudo service xrdp restart
+
+
 
 ## Window Manager
 sudo add-apt-repository ppa:regolith-linux/stable
