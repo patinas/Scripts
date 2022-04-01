@@ -70,7 +70,7 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 chmod +x *.sh
 
 sudo cat > crontab -l <<EOF
-*/30 * * * * /root/post_install_linux/update.sh >/dev/null 2>&1
+*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1
 EOF
 
 
