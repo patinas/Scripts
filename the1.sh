@@ -29,7 +29,7 @@ sudo service xrdp restart
 
 
 ## Window Manager
-sudo add-apt-repository ppa:regolith-linux/stable
+sudo add-apt-repository ppa:regolith-linux/stable -y
 sudo apt install regolith-desktop-standard -y
 sudo apt install regolith-look-ayu -y
 regolith-look set ayu
