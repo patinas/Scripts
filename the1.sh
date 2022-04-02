@@ -14,7 +14,7 @@ sudo apt install openssh-server -y
 sudo apt install peek -y
 sudo apt install variety -y
 sudo apt install flatpak -y
-flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
+sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 sudo apt install snapd -y
@@ -32,12 +32,12 @@ sudo service xrdp restart
 sudo add-apt-repository ppa:regolith-linux/stable -y
 sudo apt install regolith-desktop-standard -y
 sudo apt install regolith-look-ayu -y
-regolith-look refresh
+sudo regolith-look refresh
 sudo cp config /etc/regolith/i3/
 
 cat > /home/user/.Xresources-regolith <<EOF
 i3-wm.gaps.inner.size: 20
-gnome.terminal.font:	JetBrains Mono 15
+gnome.terminal.font: JetBrains Mono 15
 EOF
 regolith-look refresh
 
