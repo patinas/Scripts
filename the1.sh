@@ -42,7 +42,7 @@ EOF
 regolith-look refresh
 
 SetLook="regolith-look set ayu"
-$SetLook 
+sudo $SetLook 
 
 ## Autostart
 sudo cp -r autostart ~/.config/
