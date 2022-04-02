@@ -40,8 +40,9 @@ i3-wm.gaps.inner.size: 20
 gnome.terminal.font:	JetBrains Mono 15
 EOF
 regolith-look refresh
-"regolith-look set ayu"
 
+SetLook="regolith-look set ayu"
+$SetLook 
 
 ## Autostart
 sudo cp -r autostart ~/.config/
