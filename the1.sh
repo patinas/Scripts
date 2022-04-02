@@ -34,14 +34,13 @@ sudo apt install regolith-desktop-standard -y
 sudo apt install regolith-look-ayu -y
 regolith-look refresh
 sudo cp config /etc/regolith/i3/
-regolith-look set ayu
 
 cat > /home/user/.Xresources-regolith <<EOF
 i3-wm.gaps.inner.size: 20
 gnome.terminal.font:	JetBrains Mono 15
 EOF
 regolith-look refresh
-regolith-look set ayu
+"regolith-look set ayu"
 
 
 ## Autostart
