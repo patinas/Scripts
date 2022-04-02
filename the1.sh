@@ -36,7 +36,7 @@ regolith-look refresh
 sudo cp config /etc/regolith/i3/
 regolith-look set ayu
 
-sudo cat > /home/user/.Xresources-regolith <<EOF
+cat > /home/user/.Xresources-regolith <<EOF
 i3-wm.gaps.inner.size: 20
 gnome.terminal.font:	JetBrains Mono 15
 EOF
