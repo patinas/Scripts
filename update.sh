@@ -1,5 +1,4 @@
 #!/bin/sh
-cd /root/post_install_linux
 while true; do ping -c1 www.google.com > /dev/null && break; done
 
 sudo dpkg --configure -a &&
