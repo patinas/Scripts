@@ -68,6 +68,7 @@ chmod +x *.sh
 
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install tasksel -y
+sudo apt install ubuntu-desktop -y
 sudo apt install pop-desktop -y
 
 
