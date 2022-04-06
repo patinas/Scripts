@@ -65,9 +65,24 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 (crontab -l ; echo "*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1")| crontab -
 chmod +x *.sh
 
-sudo cat > crontab -l <<EOF
-*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1
-EOF
+## install and enable remote desktop with xrdp
+
+sudo apt install xrdp -y
+sudo systemctl enable --now xrdp
+
+## Add the port 3389 to the iptables and save
+
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3389 -j ACCEPT
+sudo netfilter-persistent save
+
+## create a user for xdrp 
+
+sudo adduser user
+sudo usermod -G xrdp user
+
+## reboot server
+
+sudo reboot
 
 
 echo Done
