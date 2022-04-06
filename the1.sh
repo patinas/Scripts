@@ -63,7 +63,13 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
 (crontab -l ; echo "*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1")| crontab -
+
 chmod +x *.sh
+
+sudo apt-get update && sudo apt-get upgrade -y
+sudo apt install tasksel -y
+sudo apt install pop-desktop -y
+
 
 ## install and enable remote desktop with xrdp
 
