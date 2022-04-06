@@ -23,20 +23,20 @@ snap install spotify
 
 
 ## Window Manager
-sudo add-apt-repository ppa:regolith-linux/stable -y
-sudo apt install regolith-desktop-standard -y
-sudo apt install regolith-look-ayu -y
-sudo regolith-look refresh
-sudo cp config /etc/regolith/i3/
+# sudo add-apt-repository ppa:regolith-linux/stable -y
+# sudo apt install regolith-desktop-standard -y
+# sudo apt install regolith-look-ayu -y
+# sudo regolith-look refresh
+# sudo cp config /etc/regolith/i3/
 
-cat > /home/user/.Xresources-regolith <<EOF
-i3-wm.gaps.inner.size: 20
-gnome.terminal.font: JetBrains Mono 15
-EOF
-regolith-look refresh
+# cat > /home/user/.Xresources-regolith <<EOF
+# i3-wm.gaps.inner.size: 20
+# gnome.terminal.font: JetBrains Mono 15
+# EOF
+# regolith-look refresh
 
-SetLook="regolith-look set ayu"
-sudo $SetLook 
+# SetLook="regolith-look set ayu"
+# sudo $SetLook 
 
 ## Autostart
 sudo cp -r autostart ~/.config/
