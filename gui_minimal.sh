@@ -25,6 +25,6 @@ sudo apt update
 sudo apt install brave-browser -y
 
 sudo apt install snapd -y
-sudo snap install remmina
+snap install remmina
 
 echo Done
