@@ -21,26 +21,6 @@ sudo apt install snapd -y
 snap install spotify
 
 
-
-## Window Manager
-# sudo add-apt-repository ppa:regolith-linux/stable -y
-# sudo apt install regolith-desktop-standard -y
-# sudo apt install regolith-look-ayu -y
-# sudo regolith-look refresh
-# sudo cp config /etc/regolith/i3/
-
-# cat > /home/user/.Xresources-regolith <<EOF
-# i3-wm.gaps.inner.size: 20
-# gnome.terminal.font: JetBrains Mono 15
-# EOF
-# regolith-look refresh
-
-# SetLook="regolith-look set ayu"
-# sudo $SetLook 
-
-## Autostart
-sudo cp -r autostart ~/.config/
-
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
 
@@ -65,32 +45,6 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 (crontab -l ; echo "*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1")| crontab -
 
 chmod +x *.sh
-
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt install tasksel -y
-sudo apt install ubuntu-desktop -y
-sudo apt install pop-desktop -y
-
-
-## install and enable remote desktop with xrdp
-
-sudo apt install xrdp -y
-sudo systemctl enable --now xrdp
-
-## Add the port 3389 to the iptables and save
-
-sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 3389 -j ACCEPT
-sudo netfilter-persistent save
-
-## create a user for xdrp 
-
-sudo adduser user
-sudo usermod -G xrdp user
-
-## reboot server
-
-sudo reboot
-
 
 echo Done
 
