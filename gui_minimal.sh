@@ -4,8 +4,7 @@ while true; do ping -c1 www.google.com > /dev/null && break; done
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install lxqt sddm -y
-sudo apt install lxqt openbox -y
+sudo apt install ubuntu-budgie-desktop -y
 
 sudo apt install curl -y
 
