@@ -46,6 +46,9 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 chmod +x *.sh
 
+cd ~/scripts
+sudo mv rc.lua /home/user/.config/
+
 echo Done
 
 exit
