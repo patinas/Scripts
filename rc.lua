@@ -510,7 +510,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -587,7 +587,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 beautiful.useless_gap = 15
 beautiful.notification_icon_size = 80
 
--- <Autostart
+-- Autostart
 awful.spawn.with_shell("xrandr --output VGA-1 --primary --mode 1920x1080 --right-of DP-1")
 awful.spawn.with_shell("compton")
-gears.wallpaper.maximized("/home/user/Pictures/Joker-Wallpaper-Download.jpg", s)
+gears.wallpaper.maximized("/home/user/Pictures/Wallpapers/wallhaven-y8ogwl.png", s)
