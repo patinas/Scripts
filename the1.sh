@@ -47,6 +47,7 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 chmod +x *.sh
 
 sudo apt install awesome -y
+sudo mkdir /home/user/.config/awesome/
 cd ~/scripts
 sudo mv rc.lua /home/user/.config/awesome/
 
