@@ -46,6 +46,11 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 chmod +x *.sh
 
+sudo add-apt-repository ppa:aslatter/ppa
+sudo apt update
+sudo apt install alacritty
+sudo mv -r ~/scripts/alacritty /home/user/.config/alacritty 
+
 sudo apt install awesome -y
 sudo mkdir /home/user/.config/awesome/
 cd ~/scripts
