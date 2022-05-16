@@ -48,7 +48,7 @@ chmod +x *.sh
 
 sudo apt install awesome -y
 cd ~/scripts
-sudo mv rc.lua /home/user/.config/
+sudo mv rc.lua /home/user/.config/awesome/
 
 echo Done
 
