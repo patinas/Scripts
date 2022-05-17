@@ -17,6 +17,8 @@ sudo apt install flatpak -y
 sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
+
+sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 sudo apt install snapd -y
 snap install spotify
 
@@ -55,6 +57,7 @@ sudo apt install awesome -y
 sudo mkdir /home/user/.config/awesome/
 cd /root/scripts
 sudo mv rc.lua /home/user/.config/awesome/
+sudo snap install polybar-git --edge --devmode
 
 echo Done
 
