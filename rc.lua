@@ -52,7 +52,7 @@ end
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "terminator"
+terminal = "alacritty"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -590,4 +590,5 @@ beautiful.notification_icon_size = 80
 -- Autostart
 awful.spawn.with_shell("xrandr --output VGA-1 --primary --mode 1920x1080 --right-of DP-1")
 awful.spawn.with_shell("compton")
-gears.wallpaper.maximized("/home/user/Pictures/Wallpapers/wallhaven-y8ogwl.png", s)
+awful.spawn.with_shell("feh --bg-fill /home/user/Pictures/Wallpapers/wallhaven-l3zmwy_1920x1080.png")
+
