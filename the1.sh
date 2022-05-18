@@ -54,7 +54,8 @@ sudo apt install alacritty
 sudo mv /root/scripts/alacritty /home/user/.config/
 
 sudo apt install awesome -y
-sudo apt install rofi
+sudo apt install rofi -y
+sudo apt install pcmanfm -y
 sudo mkdir /home/user/.config/awesome/
 cd /root/scripts
 sudo mv rc.lua /home/user/.config/awesome/
