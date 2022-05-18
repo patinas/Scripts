@@ -4,7 +4,7 @@ while true; do ping -c1 www.google.com > /dev/null && break; done
 
 sudo apt update && sudo apt upgrade -y
 
-
+sudo apt install xfce4 -y
 sudo apt install curl -y
 
 sudo curl -s https://install.zerotier.com | sudo bash
