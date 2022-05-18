@@ -54,6 +54,7 @@ sudo apt install alacritty
 sudo mv -r /root/scripts/alacritty /home/user/.config/alacritty 
 
 sudo apt install awesome -y
+sudo apt install rofi
 sudo mkdir /home/user/.config/awesome/
 cd /root/scripts
 sudo mv rc.lua /home/user/.config/awesome/
