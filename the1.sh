@@ -58,7 +58,7 @@ sudo apt install rofi
 sudo mkdir /home/user/.config/awesome/
 cd /root/scripts
 sudo mv rc.lua /home/user/.config/awesome/
-sudo snap install polybar-git --edge --devmode
+sudo cp ~/.config/awesome/mytheme.lua /usr/share/awesome/themes/default/
 
 echo Done
 
