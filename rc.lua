@@ -6,6 +6,10 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
+
+local apt_widget = require("awesome-wm-widgets.apt-widget.apt-widget")
+
+
 -- Widget and layout library
 local wibox = require("wibox")
 -- Theme handling library
@@ -47,9 +51,11 @@ do
 end
 -- }}}
 
+
+
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "default/mytheme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -121,11 +127,12 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- {{{ Wibar
 -- Create a textclock widget
 mytextclock = wibox.widget.textclock()
+
+
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(
@@ -232,10 +239,20 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
             mytextclock,
             s.mylayoutbox,
+
+                
+
         },
+
+       
     }
+
+		
+
+
 end)
--- }}}
+
+
 
 -- {{{ Mouse bindings
 root.buttons(gears.table.join(
@@ -268,7 +285,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
+    awful.key({ modkey,           }, "esc", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -330,7 +347,15 @@ globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ modkey }, "space",     function ()
-    awful.util.spawn("rofi -show drun")  end,
+    awful.util.spawn("rofi -show drun -show-icons")  end,
+              {description = "run prompt", group = "launcher"}),
+
+    awful.key({ modkey }, "w",     function ()
+    awful.util.spawn("google-chrome")  end,
+              {description = "run prompt", group = "launcher"}),
+
+    awful.key({ modkey }, "p",     function ()
+    awful.util.spawn("pcmanfm")  end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
@@ -344,7 +369,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
+    awful.key({ modkey }, "", function() menubar.show() end,
               {description = "show the menubar", group = "launcher"})
 )
 
@@ -585,7 +610,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Gaps
 beautiful.useless_gap = 15
-beautiful.notification_icon_size = 80
+beautiful.notification_icon_size = 70
 
 -- Autostart
 awful.spawn.with_shell("xrandr --output VGA-1 --primary --mode 1920x1080 --right-of DP-1")
