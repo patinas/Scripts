@@ -51,7 +51,7 @@ chmod +x *.sh
 sudo add-apt-repository ppa:aslatter/ppa
 sudo apt update
 sudo apt install alacritty
-sudo mv -r /root/scripts/alacritty /home/user/.config/alacritty 
+sudo mv /root/scripts/alacritty /home/user/.config/
 
 sudo apt install awesome -y
 sudo apt install rofi
