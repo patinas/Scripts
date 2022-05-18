@@ -8,6 +8,6 @@ sudo apt install rclone -y
 
 rclone config
 
-(crontab -l ; echo "* * * * * rclone sync /home/user/Downloads/ gdrive:/Sync/ >/dev/null 2>&1")| crontab -
+(crontab -l ; echo "* * * * * rclone copy /home/user/Downloads/ gdrive:/LinuxDownloads/ >/dev/null 2>&1")| crontab -
 
 chmod +x *.sh
