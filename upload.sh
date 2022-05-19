@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /root/post_install_linux/
+cd /root/scripts/
 sudo chmod +x *.sh
 gstatus=`git status --porcelain`
 
