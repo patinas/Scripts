@@ -284,7 +284,7 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "esc", function () mymainmenu:show() end,
+    awful.key({ modkey,           }, "+", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
@@ -352,6 +352,12 @@ globalkeys = gears.table.join(
  	awful.key({ modkey }, "0",     function ()
     awful.util.spawn("sh /home/user/bluereload/blue.sh")  end,
               {description = "run prompt", group = "launcher"}),
+
+
+ 	awful.key({ modkey }, "esc",     function ()
+    awful.util.spawn("sudo sh /root/scripts/shutdown.sh")  end,
+              {description = "run prompt", group = "launcher"}),
+
 
     awful.key({ modkey }, "w",     function ()
     awful.util.spawn("google-chrome")  end,
