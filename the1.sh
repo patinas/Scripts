@@ -63,7 +63,7 @@ sudo cp mytheme.lua /usr/share/awesome/themes/default/
 
 sudo chown -R user:user /home/user
 
-sudo apt install bluez bluez-tools
+sudo apt install bluez bluez-tools -y
 
 
 echo Done
