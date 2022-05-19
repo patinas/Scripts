@@ -67,9 +67,6 @@ sudo apt install bluez bluez-tools -y
 sudo apt install ntp -y
 sudo timedatectl set-timezone Europe/Copenhagen
 
-cd /home/user/.config/awesome/
-git clone https://github.com/streetturtle/awesome-wm-widgets.git
-
 
 
 echo Done
