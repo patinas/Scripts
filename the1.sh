@@ -64,6 +64,7 @@ sudo cp mytheme.lua /usr/share/awesome/themes/default/
 sudo chown -R user:user /home/user
 
 sudo apt install bluez bluez-tools -y
+sudo apt install ntp -y
 
 
 echo Done
