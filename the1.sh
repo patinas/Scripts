@@ -65,6 +65,7 @@ sudo chown -R user:user /home/user
 
 sudo apt install bluez bluez-tools -y
 sudo apt install ntp -y
+sudo timedatectl set-timezone Europe/Copenhagen
 
 
 echo Done
