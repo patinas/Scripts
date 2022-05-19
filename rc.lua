@@ -1,3 +1,4 @@
+   
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -585,6 +586,9 @@ client.connect_signal("request::titlebars", function(c)
             buttons = buttons,
             layout  = wibox.layout.flex.horizontal
         },
+
+
+        
         { -- Right
             awful.titlebar.widget.floatingbutton (c),
             awful.titlebar.widget.maximizedbutton(c),
@@ -614,4 +618,8 @@ beautiful.notification_icon_size = 70
 awful.spawn.with_shell("xrandr --output VGA-1 --primary --mode 1920x1080 --right-of DP-1")
 awful.spawn.with_shell("compton")
 awful.spawn.with_shell("feh --bg-fill /home/user/.config/awesome/wallhaven-72rxqo.jpg")
+
+
+
+
 
