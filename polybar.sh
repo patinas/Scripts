@@ -7,3 +7,4 @@ sudo apt install libjsoncpp-dev -y
 sudo ln -s /usr/include/jsoncpp/json/ /usr/include/json
 git clone https://github.com/jaagr/polybar.git
 cd polybar && ./build.sh
+polybar example
