@@ -349,6 +349,10 @@ globalkeys = gears.table.join(
     awful.util.spawn("rofi -show drun -show-icons")  end,
               {description = "run prompt", group = "launcher"}),
 
+ 	awful.key({ modkey }, "0",     function ()
+    awful.util.spawn("sh /home/user/bluereload/blue.sh")  end,
+              {description = "run prompt", group = "launcher"}),
+
     awful.key({ modkey }, "w",     function ()
     awful.util.spawn("google-chrome")  end,
               {description = "run prompt", group = "launcher"}),
