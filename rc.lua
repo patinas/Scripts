@@ -7,8 +7,6 @@ local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
 
-local apt_widget = require("awesome-wm-widgets.apt-widget.apt-widget")
-
 
 -- Widget and layout library
 local wibox = require("wibox")
@@ -615,5 +613,5 @@ beautiful.notification_icon_size = 70
 -- Autostart
 awful.spawn.with_shell("xrandr --output VGA-1 --primary --mode 1920x1080 --right-of DP-1")
 awful.spawn.with_shell("compton")
-awful.spawn.with_shell("feh --bg-fill /home/user/Pictures/Wallpapers/wallhaven-l3zmwy_1920x1080.png")
+awful.spawn.with_shell("feh --bg-fill /home/user/.config/awesome/wallhaven-72rxqo.jpg")
 
