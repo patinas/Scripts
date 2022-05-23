@@ -18,7 +18,6 @@ sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.pha
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 
-sudo mv /etc/apt/preferences.d/nosnap.pref ~/Documents/nosnap.backup
 sudo apt install snapd -y
 snap install spotify
 
@@ -42,32 +41,6 @@ apt autoremove -y
 sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
-
-
-(crontab -l ; echo "*/30 * * * * /root/scripts/update.sh >/dev/null 2>&1")| crontab -
-
-chmod +x *.sh
-
-sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt update
-sudo apt install alacritty
-sudo mv /root/scripts/alacritty /home/user/.config/
-
-sudo apt install awesome -y
-sudo apt install rofi -y
-sudo apt install pcmanfm -y
-sudo mkdir /home/user/.config/awesome/
-cd /root/scripts
-sudo mv rc.lua /home/user/.config/awesome/
-sudo cp mytheme.lua /usr/share/awesome/themes/default/
-
-sudo chown -R user:user /home/user
-
-sudo apt install bluez bluez-tools -y
-sudo apt install ntp -y
-sudo timedatectl set-timezone Europe/Copenhagen
-
-
 
 echo Done
 
