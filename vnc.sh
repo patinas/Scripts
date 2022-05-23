@@ -1,8 +1,8 @@
 #!/bin/sh
 
 sudo apt update
-sudo apt install lightdm
-sudo apt install x11vnc
+sudo apt install lightdm -y
+sudo apt install x11vnc -y
 
 sudo cat > /lib/systemd/system/x11vnc.service  <<EOF
 [Unit]
