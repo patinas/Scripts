@@ -24,6 +24,8 @@ snap install spotify
 
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
+curl -s http://download.zerotier.com/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zerotier.com.gpg > /dev/null
+
 
 curl https://getmic.ro | bash
 sudo chown root:root micro
