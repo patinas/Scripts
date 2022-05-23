@@ -4,7 +4,7 @@ sudo apt update
 sudo apt install lightdm -y
 sudo apt install x11vnc -y
 
-sudo cat > /lib/systemd/system/x11vnc.service  <<EOF
+sudo cat > /lib/systemd/system/x11vnc.service <<EOF
 [Unit]
 Description=x11vnc service
 After=display-manager.service network.target syslog.target
@@ -24,6 +24,6 @@ sudo systemctl daemon-reload
 sudo systemctl enable x11vnc.service
 sudo systemctl start x11vnc.service
 
-sudo reboot
+# sudo reboot
 
 
