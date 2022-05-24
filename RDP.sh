@@ -1,7 +1,7 @@
 #!/bin/sh
 
 adduser rdpuser
-u sermod -aG sudo rdpuser
+usermod -aG sudo rdpuser
 apt-get update
 apt-get install xrdp
 systemctl start xrdp
