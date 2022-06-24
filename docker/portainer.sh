@@ -19,8 +19,8 @@ sudo docker run -d \
 -v portainer_data:/data \
 portainer/portainer-ce:latest
 
-sudo curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join 9f77fc393e977c16
+# sudo curl -s https://install.zerotier.com | sudo bash
+# sudo zerotier-cli join 9f77fc393e977c16
 
 sudo chmod +x portainer.sh
 
