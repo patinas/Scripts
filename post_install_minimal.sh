@@ -16,9 +16,6 @@ sudo chown root:root micro
 sudo mv micro /usr/local/bin
 sudo apt install xclip -y
 
-wget https://download.nomachine.com/free/linux/64/deb -O nomachine.deb
-sudo apt install ./nomachine.deb
-
 sudo apt update && sudo apt upgrade -y
 
 echo Done
