@@ -1,7 +1,7 @@
 #!/bin/sh
 
 apt update
-apt systemctl stop systemd-resolved.service
+# apt systemctl stop systemd-resolved.service
 
 
 grep -v "nameserver 127.0.0.53" /etc/resolv.conf > tmpfile && mv tmpfile /etc/resolv.conf
@@ -50,7 +50,6 @@ for i in $(seq 1 20); do
 done;
 EOF
 
-touch pihole.sh
 chmod u+x pihole.sh
 ./pihole.sh
 
