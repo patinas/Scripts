@@ -10,9 +10,6 @@ sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo rm google-chrome-stable_current_amd64.deb
 
-sudo wget https://download.nomachine.com/free/linux/64/deb -O nomachine.deb
-sudo apt install ./nomachine.deb -y
-
 sudo apt install openssh-server -y
 sudo apt install peek -y
 sudo apt install variety -y
@@ -22,7 +19,10 @@ sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 
 sudo apt install snapd -y
-snap install spotify
+
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
 
 
 sudo curl -s https://install.zerotier.com | sudo bash
