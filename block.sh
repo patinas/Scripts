@@ -1,7 +1,7 @@
 #!/bin/sh
 
 apt update
-# apt systemctl stop systemd-resolved.service
+systemctl stop systemd-resolved.service
 
 
 grep -v "nameserver 127.0.0.53" /etc/resolv.conf > tmpfile && mv tmpfile /etc/resolv.conf
@@ -16,8 +16,6 @@ apt install docker.io -y
 
 tee pihole.sh <<EOF
 #!/bin/bash
-
-# https://github.com/pi-hole/docker-pi-hole/blob/master/README.md
 
 docker run -d \
     --name pihole \
