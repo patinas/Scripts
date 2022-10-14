@@ -32,13 +32,11 @@ http_access deny CONNECT !SSL_ports
 http_access allow localhost manager
 http_access deny manager
 http_access deny to_localhost
-http_access allow localnet
 http_access allow localhost
 
-# Egne tilføjelser
-acl domains dstdomain "/etc/squid/domains.txt"
+acl domains dstdomain "/etc/squid/domains.acl"
 http_access deny localnet domains
-acl keyword_block url_regex "/etc/squid/keyword_block.txt"
+acl keyword_block url_regex "/etc/squid/keyword_block.acl"
 http_access deny localnet keyword_block
 http_access allow localnet
 
