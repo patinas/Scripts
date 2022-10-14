@@ -65,7 +65,7 @@ youtube
 EOF
 
 # Genstart af Squid.
-systemctl reload squid
+systemctl restart squid
 
 # Live monitoring af logs
 watch tail /var/log/squid/access.log
