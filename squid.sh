@@ -38,7 +38,8 @@ http_access allow localhost
 # Egne tilføjelser
 acl domains dstdomain "/etc/squid/domains.txt" 
 acl keyword_block url_regex "/etc/squid/keyword_block.txt"
-http_access deny localnet domains keyword_block
+http_access deny localnet domains
+http_access deny localnet keyword_block
 http_access allow localnet
 
 http_access deny all
