@@ -28,9 +28,10 @@ sudo apt install gnome-tweaks -y
 
 sudo apt install snapd -y
 sudo snap install mailspring
-cd /home/user/ExpanDrive/Google Drive/Shared Drives/DATA/Downloads/SNAPS
-snap install obsidian*.snap
 
+mkdir /home/user/AppImages
+cd /home/user/AppImages
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.0.0/Obsidian-1.0.0.AppImage
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
