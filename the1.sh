@@ -19,8 +19,18 @@ sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.pha
 sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 
+# curl https://packages.expandrive.com/keys/expandrive.asc | gpg – dearmor > packages.expandrive.gpg
+# sudo install -o root -g root -m 644 packages.expandrive.gpg /usr/share/keyrings/
+# sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.expandrive.gpg] https://packages.expandrive.com/expandrive stable main" > /etc/apt/sources.list.d/expandrive.list'
+# sudo apt-get install apt-transport-https
+# sudo apt-get update
+# sudo apt-get install expandrive
+
 sudo apt install snapd -y
 sudo snap install mailspring
+cd /home/user/ExpanDrive/Google Drive/Shared Drives/DATA/Downloads/SNAPS
+snap install obsidian*.snap
+
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
