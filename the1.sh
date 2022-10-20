@@ -6,6 +6,7 @@ sudo apt update && sudo apt upgrade -y
 apt install timeshift -y
 sudo apt install curl -y
 
+
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo rm google-chrome-stable_current_amd64.deb
@@ -19,6 +20,7 @@ sudo apt install snapd -y
 sudo apt install gnome-tweaks -y
 
 sudo apt install snapd -y
+sudo snap install mailspring
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
