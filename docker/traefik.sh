@@ -2,6 +2,8 @@
 # create a working directory
 mkdir ~/docker/traefik -p
 
+docker network create web
+
 tee ~/docker/traefik/dynamic.yml <<EOF
 ## Setting up the middleware for redirect to https ##
 http:
