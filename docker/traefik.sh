@@ -48,5 +48,7 @@ networks:
     external: true
 EOF
 
+cd ~/docker/traefik/
 docker-compose up -d
+cd
 
