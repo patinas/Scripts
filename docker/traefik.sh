@@ -42,7 +42,7 @@ services:
       - web # <== Placing traefik on the network named web, to access containers on this network
     labels:
       - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to view it
-      - "traefik.http.routers.api.rule=Host(`monitor.sudoer.ga`)" # <== Setting the domain for the dashboard
+      - "traefik.http.routers.api.rule=Host(`monitor.hackerman.tk`)" # <== Setting the domain for the dashboard
       - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to access
 
 networks:
