@@ -9,6 +9,7 @@ services:
             - '6901:6901'
         environment:
             - VNC_PW=root
+        network_mode: web
         labels:
             - traefik.enable=true
             - traefik.http.routers.kali.rule=Host(`kali.sudoer.ga`)
