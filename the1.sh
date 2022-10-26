@@ -73,6 +73,10 @@ sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
+
+sudo tee /etc/fuse.conf <<EOF
+user_allow_other
+EOF
 cd /mnt
 sudo mkdir md
 sudo chown user:user md
