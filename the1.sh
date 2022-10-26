@@ -73,6 +73,12 @@ sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
+cd /mnt
+sudo mkdir md
+sudo chown user:user md
+cd md
+sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3 root@70.34.223.123:/root/jekyll/patinas.github.io/_posts/ /mnt/md
+cd
 echo Done
 
 exit
