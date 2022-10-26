@@ -16,6 +16,7 @@ services:
             - traefik.http.routers.kali.rule=Host(`hackerman.tk`)
             - traefik.http.routers.kali.entrypoints=web
         image: 'kasmweb/core-kali-rolling:1.11.0'
+    restart: unless-stopped
 EOF
 
 docker-compose up -d
