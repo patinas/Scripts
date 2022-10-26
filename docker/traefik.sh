@@ -1,56 +1,108 @@
 #!/bin/sh
-# create a working directory
-mkdir ~/docker/traefik -p
 
 docker network create web
 
-tee ~/docker/traefik/dynamic.yml <<EOF
-## Setting up the middleware for redirect to https ##
-http:
-  middlewares:
-    redirect:
-      redirectScheme:
-        scheme: https
+mkdir /etc/traefik -p
+tee /etc/traefik/traefik.yml <<EOF
+global:
+  checkNewVersion: true
+  sendAnonymousUsage: false  # true by default
+
+# (Optional) Log information
+# ---
+# log:
+#  level: ERROR  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+#   format: common  # common, json, logfmt
+#   filePath: /var/log/traefik/traefik.log
+
+# (Optional) Accesslog
+# ---
+# accesslog:
+  # format: common  # common, json, logfmt
+  # filePath: /var/log/traefik/access.log
+
+# (Optional) Enable API and Dashboard
+# ---
+api:
+  dashboard: true  # true by default
+  insecure: true  # Don't do this in production!
+
+# Entry Points configuration
+# ---
+entryPoints:
+  web:
+    address: :80
+    # (Optional) Redirect to HTTPS
+    # ---
+    # http:
+    #   redirections:
+    #     entryPoint:
+    #       to: websecure
+    #       scheme: https
+
+  websecure:
+    address: :443
+
+# Configure your CertificateResolver here...
+# ---
+# certificatesResolvers:
+#   staging:
+#     acme:
+#       email: your-email@example.com
+#       storage: /etc/traefik/certs/acme.json
+#       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
+#       httpChallenge:
+#         entryPoint: web
+#
+#   production:
+#     acme:
+#       email: your-email@example.com
+#       storage: /etc/traefik/certs/acme.json
+#       caServer: "https://acme-v02.api.letsencrypt.org/directory"
+#       httpChallenge:
+#         entryPoint: web
+
+# (Optional) Overwrite Default Certificates
+# tls:
+#   stores:
+#     default:
+#       defaultCertificate:
+#         certFile: /etc/traefik/certs/cert.pem
+#         keyFile: /etc/traefik/certs/cert-key.pem
+# (Optional) Disable TLS version 1.0 and 1.1
+#   options:
+#     default:
+#       minVersion: VersionTLS12
+
+providers:
+  docker:
+    exposedByDefault: false  # Default is true
+  file:
+    # watch for dynamic configuration changes
+    directory: /etc/traefik
+    watch: true
 EOF
 
-tee ~/docker/traefik/docker-compose.yml <<EOF
-version: "3.3"
+
+
+tee /etc/traefik/docker-compose.yml <<EOF
+version: '3'
 
 services:
   traefik:
-    image: traefik:v2.0
-    restart: always
-    container_name: traefik
+    image: "traefik:v2.5"
+    container_name: "traefik"
     ports:
-      - "80:80" # <== http
-      - "8080:8080" # <== :8080 is where the dashboard runs on
-      - "443:443" # <== https
-    command:
-      - --api.insecure=true # <== Enabling insecure api, NOT RECOMMENDED FOR PRODUCTION
-      - --api.dashboard=true # <== Enabling the dashboard to view services, middlewares, routers, etc...
-      - --api.debug=true # <== Enabling additional endpoints for debugging and profiling
-      - --log.level=DEBUG # <== Setting the level of the logs from traefik
-      - --providers.docker=true # <== Enabling docker as the provider for traefik
-      - --providers.docker.exposedbydefault=false # <== Don't expose every container to traefik, only expose enabled ones
-      - --providers.file.filename=/dynamic.yaml # <== Referring to a dynamic configuration file
-      - --providers.docker.network=web # <== Operate on the docker network named web
-      - --entrypoints.web.address=:80 # <== Defining an entrypoint for port :80 named web
+      - "80:80"
+      - "443:443"
+      # (Optional) Expose Dashboard
+      - "8080:8080"  # Don't do this in production!
     volumes:
-      - /var/run/docker.sock:/var/run/docker.sock # <== Volume for docker admin
-      - ./dynamic.yaml:/dynamic.yaml # <== Volume for dynamic conf file, **ref: line 27
-    networks:
-      - web # <== Placing traefik on the network named web, to access containers on this network
-    labels:
-      - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to view it
-      - "traefik.http.routers.api.rule=Host(`monitor.hackerman.tk`)" # <== Setting the domain for the dashboard
-      - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to access
-
-networks:
-  web:
-    external: true
+      - /etc/traefik:/etc/traefik
+      - /var/run/docker.sock:/var/run/docker.sock:ro
 EOF
 
-cd ~/docker/traefik/
+cd /etc/traefik/
 docker-compose up -d
 cd
 
