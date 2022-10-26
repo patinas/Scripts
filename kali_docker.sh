@@ -1,3 +1,4 @@
+#!/bin/sh
 mkdir ~/kali
 cd ~/kali
 
@@ -12,7 +13,7 @@ services:
         network_mode: web
         labels:
             - traefik.enable=true
-            - traefik.http.routers.kali.rule=Host(`kali.sudoer.ga`)
+            - traefik.http.routers.kali.rule=Host(`hackerman.tk`)
             - traefik.http.routers.kali.entrypoints=web
         image: 'kasmweb/core-kali-rolling:1.11.0'
 EOF
