@@ -33,12 +33,14 @@ mkdir /home/user/AppImages
 cd /home/user/AppImages
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.0.0/Obsidian-1.0.0.AppImage
 chmod +x *.AppImage
+wget https://forum.obsidian.md/uploads/default/original/2X/6/663886873dba65def747edf8ebf752a0a8d09db0.jpeg
+mv 663886873dba65def747edf8ebf752a0a8d09db0.jpeg obsidian_image.jpg
 tee ~/.local/share/applications/obsidian.desktop <<EOF
 [Desktop Entry]
 Type=Application
 Name=Obsidian
 Comment=Obsidian
-Icon=/home/user/AppImages/obsidian_image.png
+Icon=/home/user/AppImages/obsidian_image.jpg
 Exec=/home/user/AppImages/Obsidian-1.0.0.AppImage
 Terminal=false
 Categories=Utilities
