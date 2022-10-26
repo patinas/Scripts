@@ -33,6 +33,16 @@ mkdir /home/user/AppImages
 cd /home/user/AppImages
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.0.0/Obsidian-1.0.0.AppImage
 chmod +x *.AppImage
+tee ~/.local/share/applications/obsidian.desktop <<EOF
+[Desktop Entry]
+Type=Application
+Name=Obsidian
+Comment=Obsidian
+Icon=/home/user/AppImages/obsidian_image.png
+Exec=/home/user/AppImages/Obsidian-1.0.0.AppImage
+Terminal=false
+Categories=Utilities
+EOF
 
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
