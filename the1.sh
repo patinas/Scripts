@@ -73,7 +73,7 @@ sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-
+killall sshfs
 sudo tee /etc/fuse.conf <<EOF
 user_allow_other
 EOF
