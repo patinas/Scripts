@@ -110,7 +110,30 @@ vte-terminal {
 }
 EOF
 
-killall sshfs
+# cd
+# tee reconnect_sshfs.sh <<EOF
+# #!/bin/sh
+# killall sshfs
+# sudo fusermount -uz /mnt/md
+# sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other root@70.34.223.123:/root/jekyll/patinas.github.io/_posts/ /mnt/md
+# EOF
+# sudo apt install expect -y
+
+# tee input.exp <<EOF
+# #!/usr/bin/expect -f
+
+# set timeout -1
+# spawn ./reconnect_sshfs.sh
+# match_max 100000
+# \rroot@70.34.223.123's password: "
+# send -- "E#4xdoRtATq?+1K3\r"
+# expect eof
+# EOF
+# sudo chmod +x ./input.exp
+# ./input.exp
+
+
+
 sudo tee /etc/fuse.conf <<EOF
 user_allow_other
 EOF
@@ -119,6 +142,7 @@ sudo mkdir md
 sudo chown user:user md
 cd md
 sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other root@70.34.223.123:/root/jekyll/patinas.github.io/_posts/ /mnt/md
+sudo chmod +x *.sh
 cd
 echo Done
 
