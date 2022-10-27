@@ -20,9 +20,7 @@ sudo docker run -d \
 portainer/portainer-ce:latest
 
 # sudo curl -s https://install.zerotier.com | sudo bash
-sudo apt install snapd -y
-sudo snap install zerotier
-sudo zerotier-cli join 9f77fc393e977c16
+# sudo zerotier-cli join 9f77fc393e977c16
 
 
 
