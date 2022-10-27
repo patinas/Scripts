@@ -25,6 +25,4 @@ portainer/portainer-ce:latest
 sudo chmod +x *.sh
 
 docker run --name kali -it kalilinux/kali-rolling /bin/bash
-
-
 echo "apt-get update && apt-get install kali-linux-everything -y"
