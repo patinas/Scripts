@@ -23,6 +23,6 @@ portainer/portainer-ce:latest
 # sudo zerotier-cli join 9f77fc393e977c16
 
 sudo chmod +x *.sh
-
+sudo apt install git -y
 docker run --name kali -it kalilinux/kali-rolling /bin/bash
 echo "apt-get update && apt-get install kali-linux-everything -y"
