@@ -9,11 +9,8 @@ sudo apt install curl -y
 sudo curl -s https://install.zerotier.com | sudo bash
 sudo zerotier-cli join 9f77fc393e977c16
 
-adduser rdpuser
-usermod -aG sudo rdpuser
-apt-get update
-apt-get install xrdp
-systemctl start xrdp
-systemctl start xrdp-sesman
-systemctl enable xrdp
-systemctl enable xrdp-sesman
+sudo apt install xrdp -y
+sudo systemctl start xrdp
+sudo systemctl enable xrdp
+sudo adduser xrdp ssl-cert
+gnome-session-save --force-logout
