@@ -134,16 +134,20 @@ EOF
 
 
 
-sudo tee /etc/fuse.conf <<EOF
-user_allow_other
-EOF
-cd /mnt
-sudo mkdir md
-sudo chown user:user md
-cd md
-sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other root@70.34.223.123:/root/jekyll/patinas.github.io/_posts/ /mnt/md
-sudo chmod +x *.sh
+# sudo tee /etc/fuse.conf <<EOF
+# user_allow_other
+# EOF
+# cd /mnt
+# sudo mkdir md
+# sudo chown user:user md
+# cd md
+# sshfs -o reconnect,ServerAliveInterval=15,ServerAliveCountMax=3,allow_other root@70.34.223.123:/root/jekyll/patinas.github.io/_posts/ /mnt/md
+# sudo chmod +x *.sh
 cd
+
+sudo apt install syncthing -y
+sudo systemctl start syncthing@user
+sudo systemctl enable syncthing@user
 echo Done
 
 exit
