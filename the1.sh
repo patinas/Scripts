@@ -5,6 +5,7 @@ while true; do ping -c1 www.google.com > /dev/null && break; done
 sudo apt update && sudo apt upgrade -y
 sudo apt install timeshift -y
 sudo apt install curl -y
+sudo apt install remmina -y
 
 cd ~/Downloads
 sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
