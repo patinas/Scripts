@@ -72,14 +72,14 @@ sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-tee ~/.config/gtk-3.0/gtk.css <<EOF
-VteTerminal,
-TerminalScreen,
-vte-terminal {
-    padding: 20px 20px 20px 20px;
-    -VteTerminal-inner-border: 20px 20px 20px 20px;
-}
-EOF
+# tee ~/.config/gtk-3.0/gtk.css <<EOF
+# VteTerminal,
+# TerminalScreen,
+# vte-terminal {
+#    padding: 20px 20px 20px 20px;
+#    -VteTerminal-inner-border: 20px 20px 20px 20px;
+# }
+# EOF
 
 # cd
 # tee reconnect_sshfs.sh <<EOF
