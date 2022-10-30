@@ -121,4 +121,10 @@ cd
 # sudo systemctl enable syncthing@user
 echo Done
 
+sudo chmod +x *.sh
+sudo apt install zenity -y
+sudo apt install dconf* -y
+dconf load / < settings.dconf
+zenity --info --text="Restore of Settings - DONE!"
+
 exit
