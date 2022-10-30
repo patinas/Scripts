@@ -72,36 +72,6 @@ sudo chmod +x *.sh
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-sudo apt install terminator -y
-tee ~/.config/terminator/config <<EOF
-[global_config]
-  borderless = True
-  extra_styling = False
-  title_font = Sans 13
-  putty_paste_style = True
-[keybindings]
-[profiles]
-  [[default]]
-    icon_bell = False
-    background_color = "#002b36"
-    cursor_color = "#aaaaaa"
-    font = Sans Bold 10
-    foreground_color = "#839496"
-    show_titlebar = False
-    scrollbar_position = hidden
-    copy_on_selection = True
-[layouts]
-  [[default]]
-    [[[window0]]]
-      type = Window
-      parent = ""
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-      profile = default
-[plugins]
-EOF
-
 tee ~/.config/gtk-3.0/gtk.css <<EOF
 VteTerminal,
 TerminalScreen,
