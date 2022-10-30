@@ -130,6 +130,13 @@ sudo apt install dconf* -y
 dconf load / < settings.dconf
 zenity --info --text="Restore of Settings - DONE!"
 
+cd
 google-drive-ocamlfuse
+mkdir ~/GoogleDrive
+google-drive-ocamlfuse ~/GoogleDrive
+google-drive-ocamlfuse -label label ~/GoogleDrive
+
+# Unmount
+# fusermount -u ~/GoogleDrive
 
 exit
