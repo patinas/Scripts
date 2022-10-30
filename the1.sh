@@ -146,9 +146,9 @@ EOF
 # sudo chmod +x *.sh
 cd
 
-sudo apt install syncthing -y
-sudo systemctl start syncthing@user
-sudo systemctl enable syncthing@user
+# sudo apt install syncthing -y
+# sudo systemctl start syncthing@user
+# sudo systemctl enable syncthing@user
 echo Done
 
 exit
