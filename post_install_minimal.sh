@@ -22,8 +22,6 @@ sudo systemctl start docker
 sudo curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
 
-# sudo curl -s https://install.zerotier.com | sudo bash
-# sudo zerotier-cli join 9f77fc393e977c16
 
 sudo chmod +x *.sh
 
@@ -34,12 +32,12 @@ sudo apt install xclip -y
 
 sudo apt update && sudo apt upgrade -y
 
-# sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
-# sudo tee -a /etc/systemd/logind.conf <<EOF
-# HandleLidSwitch=ignore
-# LidSwitchIgnoreInhibited=no
-# EOF
-# sudo service systemd-logind restart
+sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
+sudo tee -a /etc/systemd/logind.conf <<EOF
+HandleLidSwitch=ignore
+LidSwitchIgnoreInhibited=no
+EOF
+sudo service systemd-logind restart
 
 sudo tailscale ip -4
 
