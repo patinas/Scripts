@@ -26,6 +26,14 @@ sudo apt update && sudo apt upgrade -y
 #
 # EOF
 
+sudo snap install microstack --devmode --edge
+# Control Node
+sudo microstack init --auto --control
+# To get connection-string
+sudo microstack add-compute
+
+# Compute node
+sudo microstack init --auto --compute --join <connection-string>
 
 
 
