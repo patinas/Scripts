@@ -22,6 +22,9 @@ sudo systemctl start docker
 sudo curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
 
+sudo curl -s https://install.zerotier.com | sudo bash
+sudo zerotier-cli join 0cccb752f77190cf
+
 
 sudo chmod +x *.sh
 
