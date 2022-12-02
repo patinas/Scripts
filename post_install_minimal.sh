@@ -35,12 +35,12 @@ sudo apt install xclip -y
 
 sudo apt update && sudo apt upgrade -y
 
-sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
-sudo tee -a /etc/systemd/logind.conf <<EOF
-HandleLidSwitch=ignore
-LidSwitchIgnoreInhibited=no
-EOF
-sudo service systemd-logind restart
+# sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
+# sudo tee -a /etc/systemd/logind.conf <<EOF
+# HandleLidSwitch=ignore
+# LidSwitchIgnoreInhibited=no
+# EOF
+# sudo service systemd-logind restart
 
 sudo tailscale ip -4
 
