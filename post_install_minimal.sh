@@ -48,7 +48,7 @@ EOF
 sudo service ssh restart
 
 # sudo apt install timeshift -y
-# sudo timeshift --create --comments "FRESH"
+# sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 
 sudo tailscale ip -4
 
