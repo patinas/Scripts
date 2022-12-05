@@ -47,6 +47,9 @@ HostKeyAlgorithms +ssh-rsa
 EOF
 sudo service ssh restart
 
+# sudo apt install timeshift -y
+# sudo timeshift --create --comments "FRESH"
+
 sudo tailscale ip -4
 
 echo Done
