@@ -49,6 +49,7 @@ sudo service ssh restart
 
 # sudo apt install timeshift -y
 # sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
+# sudo timeshift --restore
 
 sudo tailscale ip -4
 
