@@ -42,6 +42,11 @@ sudo apt update && sudo apt upgrade -y
 # EOF
 # sudo service systemd-logind restart
 
+sudo tee -a /etc/ssh/sshd_config <<EOF
+HostKeyAlgorithms +ssh-rsa
+EOF
+sudo service ssh restart
+
 sudo tailscale ip -4
 
 echo Done
