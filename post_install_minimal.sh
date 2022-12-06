@@ -52,6 +52,8 @@ sudo apt install timeshift -y
 sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
 
+sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
+
 sudo tailscale ip -4
 
 echo Done
