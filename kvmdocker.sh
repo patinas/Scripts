@@ -59,6 +59,9 @@ services:
       - "/kvmdata:/kvmdata"
 EOF
 
+cd ~/windows-in-docker/
+docker-compose up -d
+
 ### For laptop deployment
 # sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
 # sudo tee -a /etc/systemd/logind.conf <<EOF
