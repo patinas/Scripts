@@ -75,6 +75,9 @@ sudo apt autoremove -y
 
 sudo chmod +x *.sh
 
+sudo curl -fsSL https://tailscale.com/install.sh | sh
+sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
+
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 # tee ~/.config/gtk-3.0/gtk.css <<EOF
