@@ -22,7 +22,8 @@ sudo apt install variety -y
 sudo apt install flatpak -y
 sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
 sudo apt install snapd -y
-sudo apt install gnome-tweaks -y
+
+# sudo apt install gnome-tweaks -y
 
 # curl https://packages.expandrive.com/keys/expandrive.asc | gpg – dearmor > packages.expandrive.gpg
 # sudo install -o root -g root -m 644 packages.expandrive.gpg /usr/share/keyrings/
@@ -32,7 +33,7 @@ sudo apt install gnome-tweaks -y
 # sudo apt-get install expandrive
 
 sudo apt install snapd -y
-sudo snap install mailspring
+# sudo snap install mailspring
 
 mkdir /home/user/AppImages
 cd /home/user/AppImages
@@ -51,14 +52,14 @@ Terminal=false
 Categories=Utilities
 EOF
 
-sudo curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
-sudo echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client -y
+# sudo curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+# sudo echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+# sudo apt-get update && sudo apt-get install spotify-client -y
 
 
-sudo curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join 9f77fc393e977c16
-sudo curl -s http://download.zerotier.com/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zerotier.com.gpg > /dev/null
+# sudo curl -s https://install.zerotier.com | sudo bash
+# sudo zerotier-cli join 9f77fc393e977c16
+# sudo curl -s http://download.zerotier.com/contact%40zerotier.com.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/zerotier.com.gpg > /dev/null
 
 
 sudo curl https://getmic.ro | bash
@@ -125,11 +126,11 @@ cd
 # sudo systemctl enable syncthing@user
 echo Done
 
-sudo chmod +x *.sh
-sudo apt install zenity -y
-sudo apt install dconf* -y
-dconf load / < settings.dconf
-zenity --info --text="Restore of Settings - DONE!"
+# sudo chmod +x *.sh
+# sudo apt install zenity -y
+# sudo apt install dconf* -y
+# dconf load / < settings.dconf
+# zenity --info --text="Restore of Settings - DONE!"
 
 cd
 # google-drive-ocamlfuse
