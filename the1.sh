@@ -15,7 +15,6 @@ sudo rm google-chrome-stable_current_amd64.deb
 
 sudo add-apt-repository ppa:alessandro-strada/ppa                                     
 sudo apt update                                                                       
-sudo apt install google-drive-ocamlfuse -y 
 sudo apt install openssh-server -y
 sudo apt install peek -y
 sudo apt install variety -y
@@ -25,32 +24,30 @@ sudo apt install snapd -y
 
 # sudo apt install gnome-tweaks -y
 
-# curl https://packages.expandrive.com/keys/expandrive.asc | gpg – dearmor > packages.expandrive.gpg
-# sudo install -o root -g root -m 644 packages.expandrive.gpg /usr/share/keyrings/
-# sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.expandrive.gpg] https://packages.expandrive.com/expandrive stable main" > /etc/apt/sources.list.d/expandrive.list'
-# sudo apt-get install apt-transport-https
-# sudo apt-get update
-# sudo apt-get install expandrive
+curl https://packages.expandrive.com/keys/expandrive.asc | gpg --dearmor > packages.expandrive.gpg
+sudo install -o root -g root -m 644 packages.expandrive.gpg /usr/share/keyrings/
+sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.expandrive.gpg] https://packages.expandrive.com/expandrive stable main" > /etc/apt/sources.list.d/expandrive.list'
+sudo apt update
+sudo apt install expandrive
 
 sudo apt install snapd -y
-# sudo snap install mailspring
 
-mkdir /home/user/AppImages
-cd /home/user/AppImages
-wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.0.0/Obsidian-1.0.0.AppImage
-chmod +x *.AppImage
-wget https://forum.obsidian.md/uploads/default/original/2X/6/663886873dba65def747edf8ebf752a0a8d09db0.jpeg
-mv 663886873dba65def747edf8ebf752a0a8d09db0.jpeg obsidian_image.jpg
-tee ~/.local/share/applications/obsidian.desktop <<EOF
-[Desktop Entry]
-Type=Application
-Name=Obsidian
-Comment=Obsidian
-Icon=/home/user/AppImages/obsidian_image.jpg
-Exec=/home/user/AppImages/Obsidian-1.0.0.AppImage
-Terminal=false
-Categories=Utilities
-EOF
+# mkdir /home/user/AppImages
+# cd /home/user/AppImages
+# wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.0.0/Obsidian-1.0.0.AppImage
+# chmod +x *.AppImage
+# wget https://forum.obsidian.md/uploads/default/original/2X/6/663886873dba65def747edf8ebf752a0a8d09db0.jpeg
+# mv 663886873dba65def747edf8ebf752a0a8d09db0.jpeg obsidian_image.jpg
+# tee ~/.local/share/applications/obsidian.desktop <<EOF
+# [Desktop Entry]
+# Type=Application
+# Name=Obsidian
+# Comment=Obsidian
+# Icon=/home/user/AppImages/obsidian_image.jpg
+# Exec=/home/user/AppImages/Obsidian-1.0.0.AppImage
+# Terminal=false
+# Categories=Utilities
+# EOF
 
 # sudo curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 # sudo echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
@@ -81,10 +78,10 @@ sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxN
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
-cd /home/user/Downloads/
-sudo chmod a+x *
-sudo ./zentile-linux-amd64
-cd
+# cd /home/user/Downloads/
+# sudo chmod a+x *
+# sudo ./zentile-linux-amd64
+# cd
 
 
 
