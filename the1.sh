@@ -83,8 +83,7 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 cd /home/user/Downloads/
 sudo chmod a+x *
-sudo ./zentile-linux-amd64@reboot sh
-(crontab -l ; echo "@reboot /home/user/Downloads/zentile_linux_amd64 >/dev/null 2>&1")| crontab -
+sudo ./zentile-linux-amd64
 cd
 
 
