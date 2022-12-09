@@ -35,6 +35,7 @@ sudo tailscale ip -4
 
 sudo apt install -y -- libvirt-daemon-system
 sudo apt install git -y
+cd
 git clone https://github.com/ms-jpq/windows-in-docker
 
 sudo tee ~/windows-in-docker/docker-compose.yml <<EOF
