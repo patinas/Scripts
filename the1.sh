@@ -8,9 +8,9 @@ sudo apt install curl -y
 sudo apt install remmina -y
 sudo apt install xrdp -y
 
-sudo add-apt-repository ppa:gezakovacs/ppa
-sudo apt-get update
-sudo apt-get install unetbootin -y
+# sudo add-apt-repository ppa:gezakovacs/ppa
+# sudo apt-get update
+# sudo apt-get install unetbootin -y
 
 sudo apt install gnome-multi-writer
 
@@ -19,7 +19,6 @@ sudo wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sudo rm google-chrome-stable_current_amd64.deb
 
-sudo add-apt-repository ppa:alessandro-strada/ppa                                     
 sudo apt update                                                                       
 sudo apt install openssh-server -y
 sudo apt install peek -y
@@ -70,11 +69,6 @@ sudo chown root:root micro
 sudo mv micro /usr/local/bin
 sudo apt install xclip -y
 
-sudo dpkg --configure -a &&
-sudo apt update &&
-sudo apt upgrade -y &&
-sudo apt install -f &&
-sudo apt autoremove -y
 
 sudo chmod +x *.sh
 
