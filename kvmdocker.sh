@@ -18,10 +18,10 @@ sudo chown root:root micro
 sudo mv micro /usr/local/bin
 sudo apt install xclip -y
 
-sudo tee -a /etc/ssh/sshd_config <<EOF
-HostKeyAlgorithms +ssh-rsa
-EOF
-sudo service ssh restart
+# sudo tee -a /etc/ssh/sshd_config <<EOF
+# HostKeyAlgorithms +ssh-rsa
+# EOF
+# sudo service ssh restart
 
 sudo apt install timeshift -y
 # sudo timeshift --list-devices
