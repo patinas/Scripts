@@ -22,8 +22,15 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
 sudo apt install qemu-kvm libvirt-daemon-system virtinst libvirt-clients bridge-utils -y
-
-
+sudo systemctl enable libvirtd
+sudo systemctl start libvirtd
+sudo usermod -aG kvm $USER
+sudo usermod -aG libvirt $USER
+sudo tee -a /etc/netplan/00-installer-config.yaml <<EOF
+network:
+  renderer: NetworkManager
+EOF
+sudo netplan apply
 
 
 
