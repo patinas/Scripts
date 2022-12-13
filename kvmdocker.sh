@@ -71,6 +71,24 @@ docker-compose up -d
 # If you want to perform Samba related configurations, just edit the smb.conf file to fit your wishes.
 git clone https://github.com/fschuindt/docker-smb.git
 cd ~/docker-smb
+
+sudo tee docker-compose.yml <<EOF
+version: '3'
+
+services:
+  samba:
+    tty: true
+    network_mode: bridge
+    volumes:
+      - /root/Shared/:/Shared
+    ports:
+      - "139:139"
+      - "445:445"
+    build:
+      context: .
+      dockerfile: Dockerfile
+EOF
+
 docker-compose build
 docker-compose up -d
 
