@@ -63,6 +63,18 @@ EOF
 cd ~/windows-in-docker/
 docker-compose up -d
 
+# Configuration
+# Edit the docker-compose.yml file, change the volumes: section to map the directory you want.
+# Eg.: I'm sharing the /mnt/hdd_repo/Shared/ Docker host directory as the Samba path. You can change it to anything you have on the host:
+# volumes:
+#   - /home/someone/my_folder/:/Shared
+# If you want to perform Samba related configurations, just edit the smb.conf file to fit your wishes.
+git clone https://github.com/fschuindt/docker-smb.git
+cd ~/docker-smb
+docker-compose build
+docker-compose up -d
+
+
 ### For laptop deployment
 # sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
 # sudo tee -a /etc/systemd/logind.conf <<EOF
