@@ -66,6 +66,7 @@ docker-compose up -d
 
 # Rclone - Google Drive for ISO's
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
+rclone config
 mkdir ~/gdrive
 rclone mount gdrive: ~/gdrive/ --daemon
 
