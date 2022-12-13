@@ -92,6 +92,10 @@ EOF
 docker-compose build
 docker-compose up -d
 
+# Rclone - Google Drive for ISO's
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
+
+
 
 ### For laptop deployment
 # sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
