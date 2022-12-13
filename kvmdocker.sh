@@ -25,7 +25,7 @@ sudo apt install xclip -y
 
 sudo apt install timeshift -y
 # sudo timeshift --list-devices
-sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
+# sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
