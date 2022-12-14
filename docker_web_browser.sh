@@ -57,7 +57,7 @@ sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 sudo systemctl restart ssh
-sudo passwd
+sudo passwd root
 
 sudo docker run -d -it --shm-size=2048m -p 6901:6901 -e VNC_PW=root kasmweb/desktop:1.12.0
 # The container is now accessible via a browser : https://IP_OF_SERVER:6901
