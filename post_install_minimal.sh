@@ -54,8 +54,13 @@ sudo apt install timeshift -y
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-sudo tailscale ip -4
 
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo passwd
+
+
+sudo tailscale ip -4
 echo Done
 
 exit
