@@ -21,7 +21,8 @@ sudo passwd root
 
 snap install ngrok
 ngrok config add-authtoken 2J05ZW80NZQ0Mjg8oK1Wi1YBQwF_2cfNh6VrZCrsU1JEDvk7Y
-
+screen -d -m ngrok start tcp 22
+screen -r
 
 
 
