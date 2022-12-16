@@ -59,12 +59,16 @@ sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh
 sudo systemctl restart ssh
 sudo passwd root
 
-sudo docker run -d -it --shm-size=2048m -p 6901:6901 -e VNC_PW=root kasmweb/desktop:1.12.0
+sudo docker run -d -it --shm-size=2048m -p 6901:6901 -e VNC_PW=root kasmweb/chrome:1.12.0
 # The container is now accessible via a browser : https://IP_OF_SERVER:6901
 # User : kasm_user
 # Password: root
 
+echo The container is now accessible via a browser : https://IP_OF_SERVER:6901
+echo User : kasm_user
+echo Password: root
 sudo tailscale ip -4
 echo Done
+
 
 exit
