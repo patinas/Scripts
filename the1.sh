@@ -29,12 +29,6 @@ sudo apt install snapd -y
 
 # sudo apt install gnome-tweaks -y
 
-curl https://packages.expandrive.com/keys/expandrive.asc | gpg --dearmor > packages.expandrive.gpg
-sudo install -o root -g root -m 644 packages.expandrive.gpg /usr/share/keyrings/
-sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.expandrive.gpg] https://packages.expandrive.com/expandrive stable main" > /etc/apt/sources.list.d/expandrive.list'
-sudo apt update
-sudo apt install expandrive
-
 sudo apt install snapd -y
 
 # mkdir /home/user/AppImages
