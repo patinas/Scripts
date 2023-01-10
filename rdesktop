@@ -10,14 +10,14 @@ sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
 
-sudo docker run -d \
-  --name="portainer" \
-  --restart on-failure \
-  -p 9000:9000 \
-  -p 8000:8000 \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v portainer_data:/data \
-  portainer/portainer-ce:latest
+# sudo docker run -d \
+#   --name="portainer" \
+#   --restart on-failure \
+#   -p 9000:9000 \
+#   -p 8000:8000 \
+#   -v /var/run/docker.sock:/var/run/docker.sock \
+#   -v portainer_data:/data \
+#   portainer/portainer-ce:latest
 
 docker run -d \
   --name=rdesktop \
@@ -38,8 +38,8 @@ docker run -d \
 sudo curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
 
-sudo curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join 0cccb752f77190cf
+# sudo curl -s https://install.zerotier.com | sudo bash
+# sudo zerotier-cli join 0cccb752f77190cf
 
 
 sudo chmod +x *.sh
@@ -58,12 +58,12 @@ sudo apt update && sudo apt upgrade -y
 # EOF
 # sudo service systemd-logind restart
 
-sudo tee -a /etc/ssh/sshd_config <<EOF
-HostKeyAlgorithms +ssh-rsa
-EOF
-sudo service ssh restart
+# sudo tee -a /etc/ssh/sshd_config <<EOF
+# HostKeyAlgorithms +ssh-rsa
+# EOF
+# sudo service ssh restart
 
-sudo apt install timeshift -y
+# sudo apt install timeshift -y
 # sudo timeshift --list-devices
 # sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
