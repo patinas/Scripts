@@ -35,4 +35,15 @@ sudo apt-get update
 sudo apt-get install -y kubelet=1.24.0-00 kubeadm=1.24.0-00 kubectl=1.24.0-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
-echo "DONE"
+echo "DONE WITH CONFIG ON ALL NODES"
+
+## On the control plane node only
+# sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.24.0
+# mkdir -p $HOME/.kube
+# sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+# sudo chown $(id -u):$(id -g) $HOME/.kube/config
+# kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+# kubeadm token create --print-join-command
+# kubectl get nodes
+
+
