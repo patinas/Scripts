@@ -43,7 +43,11 @@ echo "DONE WITH CONFIG ON ALL NODES"
 # sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 # sudo chown $(id -u):$(id -g) $HOME/.kube/config
 # kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
+
+## Create join command and paste into worker nodes starting with "sudo"
 # kubeadm token create --print-join-command
+
+## On the control plane again
 # kubectl get nodes
 
 
