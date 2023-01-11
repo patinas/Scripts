@@ -2,8 +2,6 @@
 
 while true; do ping -c1 www.google.com > /dev/null && break; done
 
-sudo apt update && sudo apt upgrade -y
-
 
 cat << EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
