@@ -28,6 +28,6 @@ sudo apt install xclip -y
 
 sudo chmod +x *.sh
 
-sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
+# sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 exit
