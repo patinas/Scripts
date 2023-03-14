@@ -10,27 +10,14 @@ sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
 
-sudo curl -fsSL https://tailscale.com/install.sh | sh
-sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
-
-curl https://getmic.ro | bash
-sudo chown root:root micro
-sudo mv micro /usr/local/bin
-sudo apt install xclip -y
-
 # sudo tee -a /etc/ssh/sshd_config <<EOF
 # HostKeyAlgorithms +ssh-rsa
 # EOF
 # sudo service ssh restart
 
-sudo apt install timeshift -y
-# sudo timeshift --list-devices
-# sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
-# sudo timeshift --restore
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-sudo tailscale ip -4
 
 
 sudo apt install -y -- libvirt-daemon-system
@@ -62,18 +49,3 @@ EOF
 
 cd ~/windows-in-docker/
 docker-compose up -d
-
-
-# Rclone - Google Drive for ISO's
-sudo -v ; curl https://rclone.org/install.sh | sudo bash
-rclone config
-mkdir ~/gdrive
-rclone mount gdrive: ~/gdrive/ --daemon
-
-### For laptop deployment
-# sudo cp /etc/systemd/logind.conf /etc/systemd/logind.conf.old
-# sudo tee -a /etc/systemd/logind.conf <<EOF
-# HandleLidSwitch=ignore
-# LidSwitchIgnoreInhibited=no
-# EOF
-# sudo service systemd-logind restart
