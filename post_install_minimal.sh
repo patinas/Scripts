@@ -19,12 +19,6 @@ sudo docker run -d \
   -v portainer_data:/data \
   portainer/portainer-ce:latest
 
-sudo curl -fsSL https://tailscale.com/install.sh | sh
-sudo tailscale up --authkey tskey-auth-kmYWEs4CNTRL-E58dqRPnpjitN4wH1JYshiDnogxNZCqR
-
-sudo curl -s https://install.zerotier.com | sudo bash
-sudo zerotier-cli join 0cccb752f77190cf
-
 
 sudo chmod +x *.sh
 
@@ -60,7 +54,8 @@ sudo systemctl restart ssh
 sudo passwd root
 
 
-sudo tailscale ip -4
+
+curl -fsSL https://tailscale.com/install.sh | sh
 echo Done
 
 exit
