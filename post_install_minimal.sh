@@ -57,6 +57,7 @@ sudo passwd root
 
 curl -fsSL https://tailscale.com/install.sh | sh
 sudo tailscale up --authkey tskey-auth-kP6XG84CNTRL-7aifkyV28JMuVwVX9bG5LMTFegeSUbXP
+tailscale ip -4
 echo Done
 
 exit
