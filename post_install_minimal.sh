@@ -56,6 +56,7 @@ sudo passwd root
 
 
 curl -fsSL https://tailscale.com/install.sh | sh
+tskey-auth-kP6XG84CNTRL-7aifkyV28JMuVwVX9bG5LMTFegeSUbXP
 echo Done
 
 exit
