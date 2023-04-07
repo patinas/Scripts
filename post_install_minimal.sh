@@ -41,7 +41,7 @@ HostKeyAlgorithms +ssh-rsa
 EOF
 sudo service ssh restart
 
-sudo apt install timeshift -y
+# sudo apt install timeshift -y
 # sudo timeshift --list-devices
 # sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
