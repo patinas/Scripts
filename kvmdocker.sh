@@ -10,11 +10,6 @@ sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
 
-# sudo tee -a /etc/ssh/sshd_config <<EOF
-# HostKeyAlgorithms +ssh-rsa
-# EOF
-# sudo service ssh restart
-
 
 sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
