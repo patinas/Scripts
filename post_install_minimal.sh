@@ -10,14 +10,14 @@ sudo apt install docker.io docker-compose -y
 sudo systemctl enable docker
 sudo systemctl start docker
 
-sudo docker run -d \
-  --name="portainer" \
-  --restart on-failure \
-  -p 9000:9000 \
-  -p 8000:8000 \
-  -v /var/run/docker.sock:/var/run/docker.sock \
-  -v portainer_data:/data \
-  portainer/portainer-ce:latest
+#sudo docker run -d \
+#  --name="portainer" \
+#  --restart on-failure \
+#  -p 9000:9000 \
+#  -p 8000:8000 \
+#  -v /var/run/docker.sock:/var/run/docker.sock \
+#  -v portainer_data:/data \
+#  portainer/portainer-ce:latest
 
 
 sudo chmod +x *.sh
@@ -36,22 +36,22 @@ sudo apt update && sudo apt upgrade -y
 # EOF
 # sudo service systemd-logind restart
 
-sudo tee -a /etc/ssh/sshd_config <<EOF
-HostKeyAlgorithms +ssh-rsa
-EOF
-sudo service ssh restart
+#sudo tee -a /etc/ssh/sshd_config <<EOF
+#HostKeyAlgorithms +ssh-rsa
+#EOF
+#sudo service ssh restart
 
 # sudo apt install timeshift -y
 # sudo timeshift --list-devices
 # sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
 
-sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
+#sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
-sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-sudo systemctl restart ssh
-sudo passwd root
+#sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+#sudo systemctl restart ssh
+#sudo passwd root
 
 
 
