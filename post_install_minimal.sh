@@ -36,22 +36,22 @@ sudo apt update && sudo apt upgrade -y
 # EOF
 # sudo service systemd-logind restart
 
-#sudo tee -a /etc/ssh/sshd_config <<EOF
-#HostKeyAlgorithms +ssh-rsa
-#EOF
-#sudo service ssh restart
+sudo tee -a /etc/ssh/sshd_config <<EOF
+HostKeyAlgorithms +ssh-rsa
+EOF
+sudo service ssh restart
 
 # sudo apt install timeshift -y
 # sudo timeshift --list-devices
 # sudo timeshift --create --comments "FRESH" --snapshot-device /dev/dm-0
 # sudo timeshift --restore
 
-#sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
+sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
 
-#sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-#sudo systemctl restart ssh
-#sudo passwd root
+sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+sudo systemctl restart ssh
+sudo passwd root
 
 
 
