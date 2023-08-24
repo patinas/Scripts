@@ -34,12 +34,12 @@ services:
       TZ:
       # Make sure DATA_DIR is the same across the three `${DATA_DIR}`s
       # The windows drivers are also downloaded under here.
-      DATA_DIR: "/kvmdata"
+      DATA_DIR: "/root/glusterfs/kvm"
     ports:
       - 80:8080
     volumes:
       - /var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock:ro
-      - "/kvmdata:/kvmdata"
+      - "/root/glusterfs/kvm:/kvmdata"
 EOF
 
 cd ~/windows-in-docker/
