@@ -83,4 +83,18 @@ curl -sSL https://warp.cloudflare.com/get.sh | bash
 # Log in to Warp
 # warp-cli login --email {{your_email}} --otp {{your_otp}}
 
+# Define the new keyboard shortcuts
+gsettings set org.gnome.desktop.wm.keybindings hide "['<Super>s']"
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Super>Tab']"
+
+# Launch browser with Win + w
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Launch Browser'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'google-chrome'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>w'
+
+# Launch Warp terminal with Win + t
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ name 'Launch Warp Terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ command 'warp-terminal'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/ binding '<Super>t'
+
 exit
