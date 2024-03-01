@@ -13,7 +13,7 @@ sudo rm google-chrome-stable_current_amd64.deb
 
 sudo apt install openssh-server -y
 sudo apt install peek -y
-sudo apt install variety -y
+# sudo apt install variety -y
 sudo apt install flatpak -y
 sudo flatpak install https://flatpak.elementary.io/repo/appstream/com.github.phase1geo.annotator.flatpakref -y
 sudo apt install snapd -y
@@ -30,45 +30,45 @@ sudo chmod +x *.sh
 
 # sudo echo 'user ALL=(ALL:ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-cd /home/user/Downloads
-wget https://github.com/leukipp/cortile/releases/download/v2.2.2/cortile_2.2.2_linux_amd64.tar.gz
+# cd /home/user/Downloads
+# wget https://github.com/leukipp/cortile/releases/download/v2.2.2/cortile_2.2.2_linux_amd64.tar.gz
 # extract cortile from the tar.gz archive
-tar -xvf cortile_*_linux_amd64.tar.gz
+# tar -xvf cortile_*_linux_amd64.tar.gz
 # execute the binary file
-./cortile
+# ./cortile
 
 # Specify the script and its location
-SCRIPT_NAME="cortile"
-SCRIPT_PATH="$HOME/Downloads/$SCRIPT_NAME"
+# SCRIPT_NAME="cortile"
+# SCRIPT_PATH="$HOME/Downloads/$SCRIPT_NAME"
 
 # Create the desktop entry
-echo "[Desktop Entry]
-Type=Application
-Name=Cortile
-Exec=$SCRIPT_PATH" > "$HOME/.config/autostart/cortile.desktop"
+# echo "[Desktop Entry]
+# Type=Application
+# Name=Cortile
+# Exec=$SCRIPT_PATH" > "$HOME/.config/autostart/cortile.desktop"
 
 # Make the script executable
-chmod +x "$SCRIPT_PATH"
+# chmod +x "$SCRIPT_PATH"
 
-echo "Cortile script added to autostart and made executable."
+# echo "Cortile script added to autostart and made executable."
 
-sudo apt install xdotool
+# sudo apt install xdotool
 
 # Set keyboard shortcuts using xfconf-query
 
 # Close Window (Alt+Q)
-xfconf-query --create -c xfwm4 -p "/commands/custom/<Alt>q" -t string -s "xdotool getactivewindow windowclose"
+# xfconf-query --create -c xfwm4 -p "/commands/custom/<Alt>q" -t string -s "xdotool getactivewindow windowclose"
 
 # Launch xfce4-appfinder (Super)
-xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/Super_L" -t string -s "xfce4-appfinder"
+# xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/Super_L" -t string -s "xfce4-appfinder"
 
 # Terminal (Alt+Enter)
-xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Return" -t string -s "xfce4-terminal"
+# xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>Return" -t string -s "xfce4-terminal"
 
 # Launch Browser (Alt+W)
-xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>w" -t string -s "google-chrome"
+# xfconf-query --create -c xfce4-keyboard-shortcuts -p "/commands/custom/<Alt>w" -t string -s "google-chrome"
 
-echo "Keyboard shortcuts set."
+# echo "Keyboard shortcuts set."
 
 
 
