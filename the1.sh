@@ -72,6 +72,7 @@ sudo chmod +x *.sh
 
 sudo snap install --classic code
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
+sudo apt install python3-pip
 
 
 exit
