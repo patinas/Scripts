@@ -99,4 +99,6 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/or
 
 curl -fsSL https://tailscale.com/install.sh | sh
 
+
+
 exit
