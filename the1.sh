@@ -70,6 +70,7 @@ sudo chmod +x *.sh
 
 # echo "Keyboard shortcuts set."
 
+sudo snap install --classic code
 
 
 exit
