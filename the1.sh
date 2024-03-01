@@ -107,6 +107,11 @@ curl -fsSL https://tailscale.com/install.sh | sh
 cat << 'EOF' > ./pause_others.sh
 #!/bin/bash
 
+# Wait for PulseAudio to start
+while ! pactl info &> /dev/null; do
+    sleep 1
+done
+
 # Get the sink index of the currently playing media
 current_sink=$(pactl list sink-inputs | grep -B 10 RUNNING | grep 'Sink Input' | awk '{print $3}')
 
@@ -120,6 +125,7 @@ EOF
 cat << 'EOF' > /etc/systemd/system/pause_others.service
 [Unit]
 Description=Pause other media sources except the currently playing one
+After=pulseaudio.service
 
 [Service]
 Type=simple
@@ -134,5 +140,7 @@ systemctl daemon-reload
 
 # Enable the service
 systemctl enable pause_others.service
+
+chmod +x pause_others.sh
 
 exit
