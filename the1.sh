@@ -101,4 +101,38 @@ curl -fsSL https://tailscale.com/install.sh | sh
 
 
 
+
+
+# Create the script to pause other media sources
+cat << 'EOF' > ./pause_others.sh
+#!/bin/bash
+
+# Get the sink index of the currently playing media
+current_sink=$(pactl list sink-inputs | grep -B 10 RUNNING | grep 'Sink Input' | awk '{print $3}')
+
+# Pause all other media sources
+pactl list sink-inputs | grep -E -v "Sink Input|#${current_sink}" | awk '/Sink Input/ {print $2}' | while read -r sink; do
+    pactl set-sink-input-mute "$sink" 1
+done
+EOF
+
+# Create the systemd service unit file
+cat << 'EOF' > /etc/systemd/system/pause_others.service
+[Unit]
+Description=Pause other media sources except the currently playing one
+
+[Service]
+Type=simple
+ExecStart=/root/scripts/pause_others.sh
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+# Reload systemd manager configuration
+systemctl daemon-reload
+
+# Enable the service
+systemctl enable pause_others.service
+
 exit
