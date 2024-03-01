@@ -71,6 +71,7 @@ sudo chmod +x *.sh
 # echo "Keyboard shortcuts set."
 
 sudo snap install --classic code
+sudo -v ; curl https://rclone.org/install.sh | sudo bash
 
 
 exit
