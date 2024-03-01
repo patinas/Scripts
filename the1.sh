@@ -75,5 +75,12 @@ sudo -v ; curl https://rclone.org/install.sh | sudo bash
 sudo apt install python3-pip -y
 # sudo pip install selenium
 
+#!/bin/bash
+
+# Install Warp
+curl -sSL https://warp.cloudflare.com/get.sh | bash
+
+# Log in to Warp
+# warp-cli login --email {{your_email}} --otp {{your_otp}}
 
 exit
