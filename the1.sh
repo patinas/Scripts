@@ -72,7 +72,8 @@ sudo chmod +x *.sh
 
 sudo snap install --classic code
 sudo -v ; curl https://rclone.org/install.sh | sudo bash
-sudo apt install python3-pip
+sudo apt install python3-pip -y
+sudo pip install selenium
 
 
 exit
